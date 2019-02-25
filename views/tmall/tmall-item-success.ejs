@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+<div class="jumbotron jumbotron-fluid">
+    <h1 style="text-align: center">아이템 관리</h1>
+</div>
+<br>
+<form action="item" method="post">
+    <div class="btn-group row text-center">
+        <div class="form-group col-6 mr-2">
+            <input class="form-control " id="dates" type="text" Placeholder="입력일자" name="dates" />
+        </div>
+        <div class="form-group mr-2">
+            <input class="form-control " id="keyword" type="text" Placeholder="keyword" name="keyword" />
+        </div>
+        <div class="form-goup mr-2">
+            <input class="btn btn-outline-secondary" type="submit" name="submit" value="제품 보기" />
+        </div>
+    </div>
+</form>
+<div id="datatable" class="no-more-tables" contenteditable='true'>
+    <%- Products %>
+</div>
+<br>
+<div style="mx-auto" style="text-align: center">
+    <a href="/tmall"><button class="btn btn-outline-secondary">티몰관리 홈</button></a>
+    <a href="/api"><button class="btn btn-outline-secondary">관리 홈</button></a>
+</div>
+
+
+<% include ../partials/scripts %>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script>
+    $('input[name="dates"]').daterangepicker({
+        opens: 'center'
+    }, function (start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+</script>
+<% include ../partials/footer %>
