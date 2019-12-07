@@ -1,9 +1,0 @@
-{
-	"extends": [
-		"airbnb",
-		"prettier"
-	],
-	"plugins": [
-		"prettier"
-	]
-}
