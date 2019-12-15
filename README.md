@@ -25,6 +25,7 @@ if(count == total){
 }
 ```
 
+
 # 해관신청용 프로그램.
 1. 해관신청이란
     - 중국 티몰에 물건을 판매하기 위해서는 판매자는 물건을 업로드 한 후 물건의 데이터를 티몰측에 보내어 pass를 받아야 함.
@@ -70,6 +71,7 @@ mongoXlsx.mongoData2Xlsx(arrData, model1, function(err, data) {
 	console.log('시트1번 이름 :', data.fullPath); 
 });
 ```
+
 4. mlab에 데이터를 저장하는 부분(api.js)
 ```javascript
 	mongoose.connect(process.env.MONGO_DB_URI, { useNewUrlParser: true } ,function(err,db){
@@ -87,8 +89,8 @@ mongoXlsx.mongoData2Xlsx(arrData, model1, function(err, data) {
 ```
 
 ---
-다음 개발사항 - 이미지업로드
-아래는 참
+다음 개발사항 : 이미지업로드
+아래는 참고용
 # Image Upload Instructions
 Video tutorial available [here](https://youtu.be/RHd4rP9U9SA)
 1. Sign up for [cloudinary](https://cloudinary.com/)
