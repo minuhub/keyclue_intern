@@ -26,11 +26,11 @@ if(count == total){
 ```
 
 # 해관신청용 프로그램.
-1.해관신청이란
+1. 해관신청이란
     - 중국 티몰에 물건을 판매하기 위해서는 판매자는 물건을 업로드 한 후 물건의 데이터를 티몰측에 보내어 pass를 받아야 함.
     - 이 작업을 해관신청이라 하는데 이때 3개의 엑셀시트에 물건의 데이터를 채워서 보내야 함.
     - 시트에 채울 데이터를 Tmall의 REST api를 이용하여 구하고, Nodejs라이브러리를 이용하여 엑셀파일로 만들어줌.
-2.Tmall api사용 예시
+2. Tmall api사용 예시
 ```javascript
 router.post("/celldown", function(req, res){
     client.execute('taobao.items.inventory.get', {
@@ -47,7 +47,7 @@ router.post("/celldown", function(req, res){
 });
 ```
 
-3.Nodejs라이브러리사용, 엑셀시트로 저장하기(tmall.js)
+3. Nodejs라이브러리사용, 엑셀시트로 저장하기(tmall.js)
 ```javascript
 var mongoXlsx = require('mongo-xlsx');
 
@@ -70,7 +70,7 @@ mongoXlsx.mongoData2Xlsx(arrData, model1, function(err, data) {
 	console.log('시트1번 이름 :', data.fullPath); 
 });
 ```
-4.mlab에 데이터를 저장하는 부분(api.js)
+4. mlab에 데이터를 저장하는 부분(api.js)
 ```javascript
 	mongoose.connect(process.env.MONGO_DB_URI, { useNewUrlParser: true } ,function(err,db){
 		if(err){
@@ -85,6 +85,10 @@ mongoXlsx.mongoData2Xlsx(arrData, model1, function(err, data) {
 		}
 	});
 ```
+
+---
+다음 개발사항 - 이미지업로드
+아래는 참
 # Image Upload Instructions
 Video tutorial available [here](https://youtu.be/RHd4rP9U9SA)
 1. Sign up for [cloudinary](https://cloudinary.com/)
